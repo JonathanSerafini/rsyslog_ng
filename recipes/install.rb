@@ -6,7 +6,7 @@ apt_repository "rsyslog" do
 end
 
 package "rsyslog" do
-  version node[:rsyslog_ng][:version] if node[:rsyslog][:version_ng]
+  version node[:rsyslog_ng][:version] if node[:rsyslog_ng][:version]
   options [
     "-o Dpkg::Options::='--force-confold'",
     "-o Dpkg::Options::='--force-overwrite'"
